@@ -50,14 +50,13 @@ public class CrearCasillas : MonoBehaviour
             for(int j = 0; j < numCasillas; j++)
             {
                 float factor = 9.0f / numCasillas;
-                Vector3 positionTemp = new Vector3(j * factor, 0, i * factor);
+                Vector3 positionTemp = new Vector3(i * factor, 0, j * factor);
                 GameObject cartaTemp = Instantiate(cartaPrefab, positionTemp, Quaternion.identity);
 
                 cartaTemp.transform.localScale *= factor;
                 cartas.Add(cartaTemp);
 
                 cartaTemp.GetComponent<Carta>().posicionCarta = positionTemp;
-                //cartaTemp.GetComponent<Carta>().numCarta = cont;
 
                 cartaTemp.transform.parent = cartasParent;
                 cont++;
@@ -94,7 +93,6 @@ public class CrearCasillas : MonoBehaviour
         {
           cartas[i].GetComponent<Carta>().AsignarTextura(texturas[(arrayDefinitivo[i/2])]);
           cartas[i].GetComponent<Carta>().numCarta = i / 2;
-
         }
     }
     

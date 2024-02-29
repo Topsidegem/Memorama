@@ -26,12 +26,10 @@ public class Carta : MonoBehaviour
     }
     void OnMouseDown()
     {
-        print("lol");
-        if(!menu.GetComponent<Menu>().menu)
-        {
-            print("si");
+        //if(!menu.GetComponent<Menu>().menu)
+        //{
             MostrarCarta();
-        }
+        //}
             
     }
 
